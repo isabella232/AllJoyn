@@ -48,6 +48,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
+import com.pubnub.api.*;
+import org.json.*;
+
 public class NotificationServiceControlsActivity extends Activity implements OnClickListener {
     private static final String TAG = "ioe" + NotificationServiceControlsActivity.class.getSimpleName();
 
@@ -761,6 +764,22 @@ public class NotificationServiceControlsActivity extends Activity implements OnC
 
         //====  SEND A MESSAGE  ====//
         myApp.send(msgType, text, customArgs, ttl, isIcon, isAudio, isIconObjPath, isAudioObjPath);
+
+        // Send PN Message
+
+        Pubnub pubnub = new Pubnub("demo", "demo");
+        Callback callback = new Callback() {
+            public void successCallback(String channel, Object response) {
+                System.out.println(response.toString());
+            }
+            public void errorCallback(String channel, PubnubError error) {
+                System.out.println(error.toString());
+            }
+        };
+
+        JSONArray convertedArray = new JSONArray(text);
+        pubnub.publish("alljoyn", convertedArray , callback);
+
 
         //clean text areas
         msg1Id.setText(""); // content of message1
