@@ -22,14 +22,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import android.content.Context;
 import com.example.NotificationServiceUISample.R;
+import com.pubnub.api.Callback;
+import com.pubnub.api.Pubnub;
+import com.pubnub.api.PubnubError;
+import com.pubnub.api.PubnubException;
 import org.alljoyn.about.AboutKeys;
 import org.alljoyn.about.AboutService;
 import org.alljoyn.about.AboutServiceImpl;
-import org.alljoyn.bus.BusAttachment;
-import org.alljoyn.bus.PasswordManager;
-import org.alljoyn.bus.SessionOpts;
-import org.alljoyn.bus.Status;
+import org.alljoyn.bus.*;
 import org.alljoyn.bus.alljoyn.DaemonInit;
 import org.alljoyn.ns.Notification;
 import org.alljoyn.ns.NotificationMessageType;
@@ -41,6 +43,8 @@ import org.alljoyn.ns.NotificationText;
 import org.alljoyn.ns.RichAudioUrl;
 import org.alljoyn.services.android.storage.Property;
 import org.alljoyn.services.android.storage.PropertyStoreImpl;
+import org.alljoyn.services.common.AnnouncementHandler;
+import org.alljoyn.services.common.BusObjectDescription;
 import org.alljoyn.services.common.PropertyStore.Filter;
 import org.alljoyn.services.common.PropertyStoreException;
 
@@ -53,9 +57,13 @@ import android.os.Vibrator;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
+import org.json.JSONArray;
 
 
 public class IoeNotificationApplication extends Application implements NotificationReceiver {
+
+    public Pubnub pubnub = new Pubnub("demo", "demo");
+
     private static final String TAG = "ioe" + IoeNotificationApplication.class.getSimpleName();
 
     static {
@@ -170,6 +178,91 @@ public class IoeNotificationApplication extends Application implements Notificat
         //Create my own BusAttachment
         DaemonInit.PrepareDaemon(this);
         notificationService = NotificationService.getInstance();
+
+        try {
+            String subChannel = "a";
+            pubnub.subscribe(subChannel, new Callback() {
+
+                @Override
+                public void connectCallback(String channel, Object message) {
+                    System.out.println("SUBSCRIBE : CONNECT on channel:" + channel
+                            + " : " + message.getClass() + " : "
+                            + message.toString());
+                }
+
+                @Override
+                public void disconnectCallback(String channel, Object message) {
+                    System.out.println("SUBSCRIBE : DISCONNECT on channel:" + channel
+                            + " : " + message.getClass() + " : "
+                            + message.toString());
+                }
+
+                public void reconnectCallback(String channel, Object message) {
+                    System.out.println("SUBSCRIBE : RECONNECT on channel:" + channel
+                            + " : " + message.getClass() + " : "
+                            + message.toString());
+                }
+
+                @Override
+                public void successCallback(String channel, Object message) {
+                    System.out.println("SUBSCRIBE : " + channel + " : "
+                            + message.getClass() + " : " + message.toString());
+
+
+//                    showToast("Via PN: " + message.toString());
+
+
+
+                    Integer ttl = 40000;
+                    List<NotificationText> pnText = new LinkedList<NotificationText>();
+
+                    //construct customArgs
+                    Map<String, String> customArgs = new HashMap<String, String>();
+                    customArgs.put("channel", channel);
+
+                    try {
+                        pnText.add(new NotificationText(LangEnum.English.INT_NAME, message.toString()));
+
+
+                    } catch (NotificationServiceException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+
+
+                    Notification notif = null;
+                    try {
+                        notif = new Notification(NotificationMessageType.EMERGENCY, pnText);
+                        notif.setCustomAttributes(customArgs);
+
+                    } catch (NotificationServiceException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+
+
+                    try {
+                        if (notificationSender != null) {
+                            notificationSender.send(notif, ttl);
+
+                        }
+                    } catch (NotificationServiceException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+
+                }
+
+                @Override
+                public void errorCallback(String channel, PubnubError error) {
+                    System.out.println("SUBSCRIBE : ERROR on channel " + channel
+                            + " : " + error.toString());
+                }
+            }
+            );
+        } catch (PubnubException e) {
+            System.out.println(e.toString());
+        }
+
+
+
     }//onCreate
 
     /**
@@ -273,6 +366,30 @@ public class IoeNotificationApplication extends Application implements Notificat
             }
 
             aboutService.startAboutClient(bus);
+            aboutService.addAnnouncementHandler(new AnnouncementHandler() {
+                @Override
+                public void onAnnouncement(String s, short i, BusObjectDescription[] busObjectDescriptions, Map<String, Variant> stringVariantMap) {
+                    Log.e(TAG, "Announcement");
+
+
+                    Callback callback = new Callback() {
+                        public void successCallback(String channel, Object response) {
+                            System.out.println(response.toString());
+                        }
+                        public void errorCallback(String channel, PubnubError error) {
+                            System.out.println(error.toString());
+                        }
+                    };
+
+                    pubnub.publish("alljoyn", "New Peer Announcement: " + s , callback);
+
+                }
+
+                @Override
+                public void onDeviceLost(String s) {
+                    //To change body of implemented methods use File | Settings | File Templates.
+                }
+            });
 
             notificationService.initReceive(bus, this);
             bus.addMatch("sessionless='t',type='error'");
@@ -376,7 +493,7 @@ public class IoeNotificationApplication extends Application implements Notificat
     @Override
     public void receive(Notification notification) {
 
-        Log.d(TAG, "Receveid new " + notification);
+        Log.d(TAG, "Received new " + notification);
 
         String notifAppName = notification.getAppName();
         //If received notification application name isn't equals to my application name, ignore the notification

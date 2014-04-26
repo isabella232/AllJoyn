@@ -51,7 +51,11 @@ import android.widget.TextView.OnEditorActionListener;
 import com.pubnub.api.*;
 import org.json.*;
 
+
 public class NotificationServiceControlsActivity extends Activity implements OnClickListener {
+
+    public Pubnub pubnub = new Pubnub("demo", "demo");
+
     private static final String TAG = "ioe" + NotificationServiceControlsActivity.class.getSimpleName();
 
     /*
@@ -767,7 +771,7 @@ public class NotificationServiceControlsActivity extends Activity implements OnC
 
         // Send PN Message
 
-        Pubnub pubnub = new Pubnub("demo", "demo");
+
         Callback callback = new Callback() {
             public void successCallback(String channel, Object response) {
                 System.out.println(response.toString());
