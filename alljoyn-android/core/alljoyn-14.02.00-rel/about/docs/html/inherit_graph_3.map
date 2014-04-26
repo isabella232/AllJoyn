@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" href="$classajn_1_1services_1_1_about_service.html" title="AboutService is an AllJoyn BusObject that implements the org.alljoyn.About standard interface..." alt="" coords="7,5,183,32"/>
+<area shape="rect" href="$classajn_1_1services_1_1_about_service_api.html" title="AboutServiceApi is wrapper class that encapsulates the AboutService with a Singelton." alt="" coords="233,5,428,32"/>
+</map>

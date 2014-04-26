@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" href="$_aj_a_p_i_8h.html" title="This file redefines __dllexport or __dllimport on relevant platforms." alt="" coords="423,304,543,331"/>
+<area shape="rect" href="$_interface_description_8h.html" title="This file defines types for statically describing a message bus interface." alt="" coords="21,80,221,107"/>
+<area shape="rect" href="$_msg_arg_8h.html" title="This file defines a class for message bus data types and values." alt="" coords="188,229,319,256"/>
+<area shape="rect" href="$_status_8h.html" title="This file contains an enumerated list values that QStatus can return." alt="" coords="88,304,213,331"/>
+<area shape="rect" href="$_session_8h.html" title="AllJoyn session related data types." alt="" coords="596,229,729,256"/>
+<area shape="rect" href="$_message_receiver_8h.html" title="MessageReceiver is a base class implemented by any class which wishes to receive AllJoyn messages..." alt="" coords="335,80,521,107"/>
+<area shape="rect" href="$_message_8h.html" title="This file defines a class for parsing and generating message bus messages." alt="" coords="281,155,420,181"/>
+</map>

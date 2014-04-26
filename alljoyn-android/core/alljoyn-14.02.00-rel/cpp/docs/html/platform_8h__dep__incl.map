@@ -1,0 +1,28 @@
+<map id="G" name="G">
+<area shape="rect" href="$_all_joyn_std_8h.html" title="This file provides definitions for AllJoyn interfaces." alt="" coords="40,379,133,405"/>
+<area shape="rect" href="$_auth_listener_8h.html" title="This file defines the AuthListener class that provides the interface between authentication mechanism..." alt="" coords="659,304,763,331"/>
+<area shape="rect" href="$_bus_attachment_8h.html" title="is the top&#45;level object responsible for connecting to a message bus." alt="" coords="1093,453,1216,480"/>
+<area shape="rect" href="$_bus_object_8h.html" title="This file defines the base class for message bus objects that are implemented and registered locally..." alt="" coords="905,379,999,405"/>
+<area shape="rect" href="$_interface_description_8h.html" title="This file defines types for statically describing a message bus interface." alt="" coords="93,304,240,331"/>
+<area shape="rect" href="$_proxy_bus_object_8h.html" title="This file defines the class ProxyBusObject." alt="" coords="452,379,580,405"/>
+<area shape="rect" href="$_key_store_listener_8h.html" title="The KeyStoreListener class handled requests to load or store the key store." alt="" coords="1261,155,1392,181"/>
+<area shape="rect" href="$_message_8h.html" title="This file defines a class for parsing and generating message bus messages." alt="" coords="463,229,548,256"/>
+<area shape="rect" href="$_message_receiver_8h.html" title="MessageReceiver is a base class implemented by any class which wishes to receive AllJoyn messages..." alt="" coords="501,304,635,331"/>
+<area shape="rect" href="$_message_sink_8h.html" title="Abstract interface implemented by objects that wish to consume Message Bus messages." alt="" coords="264,304,376,331"/>
+<area shape="rect" href="$_msg_arg_8h.html" title="This file defines a class for message bus data types and values." alt="" coords="483,155,560,181"/>
+<area shape="rect" href="$_password_manager_8h.html" title="This file defines the PasswordManager class that provides the interface to set credentials used for t..." alt="" coords="939,155,1077,181"/>
+<area shape="rect" href="$_session_8h.html" title="AllJoyn session related data types." alt="" coords="1416,155,1496,181"/>
+<area shape="rect" href="$_transport_mask_8h.html" title="Transport type definitions." alt="" coords="1392,80,1509,107"/>
+<area shape="rect" href="$version_8h.html" title="This file provides access to AllJoyn library version and build information." alt="" coords="1584,80,1656,107"/>
+<area shape="rect" href="$atomic_8h.html" title="Toolchain specific wrapper for atomic.h." alt="" coords="273,80,345,107"/>
+<area shape="rect" href="$_managed_obj_8h.html" title="This template class provides reference counting based heap allocation for objects." alt="" coords="253,155,357,181"/>
+<area shape="rect" href="$_debug_8h.html" title="Define some convenience macros for debugging." alt="" coords="1680,80,1749,107"/>
+<area shape="rect" href="$_log_8h.html" title="Log control." alt="" coords="1773,80,1827,107"/>
+<area shape="rect" href="$posix_2atomic_8h.html" title="Define atomic read&#45;modify&#45;write memory options." alt="" coords="1851,80,1923,107"/>
+<area shape="rect" href="$_string_8h.html" title="Non&#45;STL version of string." alt="" coords="817,80,884,107"/>
+<area shape="rect" href="$_string_util_8h.html" title="This file defines string related utility functions." alt="" coords="1101,155,1187,181"/>
+<area shape="rect" href="$_session_listener_8h.html" title="SessionListener is an abstract base class (interface) implemented by users of the AllJoyn API in orde..." alt="" coords="1243,229,1365,256"/>
+<area shape="rect" href="$_session_port_listener_8h.html" title="SessionPortListener is an abstract base class (interface) implemented by users of the AllJoyn API in ..." alt="" coords="1293,304,1440,331"/>
+<area shape="rect" href="$_simple_bus_listener_8h.html" title="SimpleBusListener is a synchronous bus listener that fits the need of applications that can handled a..." alt="" coords="1440,229,1579,256"/>
+<area shape="rect" href="$_bus_listener_8h.html" title="BusListener is an abstract base class (interface) implemented by users of the AllJoyn API in order to..." alt="" coords="1520,155,1619,181"/>
+</map>

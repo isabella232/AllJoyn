@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" href="$platform_8h.html" title="This file just wraps including actual OS and toolchain specific header files depding on the OS group ..." alt="" coords="40,155,144,181"/>
+<area shape="rect" href="$_string_8h.html" title="Non&#45;STL version of string." alt="" coords="148,80,239,107"/>
+</map>

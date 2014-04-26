@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" href="$classajn_1_1_message_receiver.html" title="MessageReceiver is a pure&#45;virtual base class that is implemented by any class that wishes to receive ..." alt="" coords="5,5,152,32"/>
+<area shape="rect" href="$classajn_1_1_bus_attachment.html" title="BusAttachment is the top&#45;level object responsible for connecting to and optionally managing a message..." alt="" coords="81,83,217,109"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" href="$_aj_a_p_i_8h.html" title="This file redefines __dllexport or __dllimport on relevant platforms." alt="" coords="40,304,160,331"/>
+<area shape="rect" href="$_session_8h.html" title="AllJoyn session related data types." alt="" coords="157,155,291,181"/>
+<area shape="rect" href="$_session_listener_8h.html" title="alljoyn_sessionlistener is an collection of callback functions implemented by users of the AllJoyn AP..." alt="" coords="23,80,201,107"/>
+<area shape="rect" href="$_transport_mask_8h.html" title="Transport type definitions." alt="" coords="137,229,311,256"/>
+</map>

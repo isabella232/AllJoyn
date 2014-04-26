@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" href="$platform_8h.html" title="This file just wraps including actual OS and toolchain specific header files depding on the OS group ..." alt="" coords="472,229,576,256"/>
+<area shape="rect" href="$_string_8h.html" title="Non&#45;STL version of string." alt="" coords="384,155,475,181"/>
+<area shape="rect" href="$_managed_obj_8h.html" title="This template class provides reference counting based heap allocation for objects." alt="" coords="153,80,284,107"/>
+<area shape="rect" href="$_msg_arg_8h.html" title="This file defines a class for message bus data types and values." alt="" coords="549,80,667,107"/>
+<area shape="rect" href="$_status_8h.html" title="This file contains an enumerated list values that QStatus can return." alt="" coords="691,155,803,181"/>
+<area shape="rect" href="$_session_8h.html" title="AllJoyn session related data types." alt="" coords="780,80,900,107"/>
+<area shape="rect" href="$atomic_8h.html" title="Toolchain specific wrapper for atomic.h." alt="" coords="213,155,309,181"/>
+<area shape="rect" href="$_transport_mask_8h.html" title="Transport type definitions." alt="" coords="877,155,1037,181"/>
+</map>

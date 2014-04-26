@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" href="$_all_joyn_std_8h.html" title="This file provides definitions for AllJoyn interfaces." alt="" coords="5,80,99,107"/>
+<area shape="rect" href="$_bus_attachment_8h.html" title="is the top&#45;level object responsible for connecting to a message bus." alt="" coords="159,155,281,181"/>
+<area shape="rect" href="$_bus_object_8h.html" title="This file defines the base class for message bus objects that are implemented and registered locally..." alt="" coords="173,80,267,107"/>
+<area shape="rect" href="$_proxy_bus_object_8h.html" title="This file defines the class ProxyBusObject." alt="" coords="291,80,419,107"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" href="$platform_8h.html" title="This file just wraps including actual OS and toolchain specific header files depding on the OS group ..." alt="" coords="524,379,628,405"/>
+<area shape="rect" href="$_string_8h.html" title="Non&#45;STL version of string." alt="" coords="135,304,225,331"/>
+<area shape="rect" href="$_interface_description_8h.html" title="This file defines types for statically describing a message bus interface." alt="" coords="280,80,467,107"/>
+<area shape="rect" href="$_msg_arg_8h.html" title="This file defines a class for message bus data types and values." alt="" coords="217,229,335,256"/>
+<area shape="rect" href="$_status_8h.html" title="This file contains an enumerated list values that QStatus can return." alt="" coords="353,304,465,331"/>
+<area shape="rect" href="$_session_8h.html" title="AllJoyn session related data types." alt="" coords="613,229,733,256"/>
+<area shape="rect" href="$_message_receiver_8h.html" title="MessageReceiver is a base class implemented by any class which wishes to receive AllJoyn messages..." alt="" coords="647,80,820,107"/>
+<area shape="rect" href="$_d_bus_std_8h.html" title="This file provides definitions for standard DBus interfaces." alt="" coords="260,155,385,181"/>
+<area shape="rect" href="$_message_8h.html" title="This file defines a class for parsing and generating message bus messages." alt="" coords="460,155,585,181"/>
+</map>

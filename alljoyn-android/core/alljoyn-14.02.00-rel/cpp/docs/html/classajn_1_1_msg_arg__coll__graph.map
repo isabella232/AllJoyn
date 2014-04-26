@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" href="$structajn_1_1_all_joyn_dict_entry.html" title="Type for a dictionary entry." alt="" coords="505,49,647,76"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_variant.html" title="Type for a variant." alt="" coords="512,153,640,180"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_struct.html" title="Type for a struct." alt="" coords="515,225,637,252"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_handle.html" title="Type for a handle." alt="" coords="20,5,148,32"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_invalid.html" title="Type for initializing an invalid MsgArg." alt="" coords="23,56,145,83"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_string.html" title="Type for the various string types." alt="" coords="23,115,145,141"/>
+<area shape="rect" href="$classajn_1_1_all_joyn_array.html" title="Type for an array." alt="" coords="24,165,144,192"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_signature.html" title="Type for a signature The same as AllJoynString except the length is a single byte (thus signatures ha..." alt="" coords="12,216,156,243"/>
+<area shape="rect" href="$structajn_1_1_all_joyn_scalar_array.html" title="Type for arrays of scalars." alt="" coords="7,267,161,293"/>
+</map>

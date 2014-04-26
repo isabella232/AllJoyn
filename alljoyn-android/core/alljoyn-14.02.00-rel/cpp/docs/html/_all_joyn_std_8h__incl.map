@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" href="$platform_8h.html" title="This file just wraps including actual OS and toolchain specific header files depding on the OS group ..." alt="" coords="9,304,113,331"/>
+<area shape="rect" href="$_interface_description_8h.html" title="This file defines types for statically describing a message bus interface." alt="" coords="41,80,228,107"/>
+<area shape="rect" href="$_string_8h.html" title="Non&#45;STL version of string." alt="" coords="57,229,148,256"/>
+<area shape="rect" href="$_d_bus_std_8h.html" title="This file provides definitions for standard DBus interfaces." alt="" coords="108,155,233,181"/>
+<area shape="rect" href="$_message_8h.html" title="This file defines a class for parsing and generating message bus messages." alt="" coords="257,155,383,181"/>
+<area shape="rect" href="$_status_8h.html" title="This file contains an enumerated list values that QStatus can return." alt="" coords="313,229,425,256"/>
+</map>

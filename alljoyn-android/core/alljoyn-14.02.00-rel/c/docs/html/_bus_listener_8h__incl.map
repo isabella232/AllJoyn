@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" href="$_aj_a_p_i_8h.html" title="This file redefines __dllexport or __dllimport on relevant platforms." alt="" coords="121,155,241,181"/>
+<area shape="rect" href="$_transport_mask_8h.html" title="Transport type definitions." alt="" coords="5,80,179,107"/>
+<area shape="rect" href="$_msg_arg_8h.html" title="This file defines a class for message bus data types and values." alt="" coords="263,80,393,107"/>
+<area shape="rect" href="$_status_8h.html" title="This file contains an enumerated list values that QStatus can return." alt="" coords="265,155,391,181"/>
+</map>
