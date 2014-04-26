@@ -628,8 +628,8 @@ public class IoeNotificationApplication extends Application implements Notificat
      * Vibrate notification
      */
     public void vibrate() {
-        Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-        v.vibrate(VIBRATION_DURATION);             // Vibrate time in milli seconds
+        //Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        //v.vibrate(VIBRATION_DURATION);             // Vibrate time in milli seconds
     }//vibrate
 
     /**
