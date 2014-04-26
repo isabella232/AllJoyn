@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ControlPanelService">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/ControlPanelService.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
