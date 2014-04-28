@@ -180,7 +180,7 @@ public class IoeNotificationApplication extends Application implements Notificat
         notificationService = NotificationService.getInstance();
 
         try {
-            String subChannel = "a";
+            String subChannel = "alljoyn-pub";
             pubnub.subscribe(subChannel, new Callback() {
 
                 @Override
@@ -494,6 +494,7 @@ public class IoeNotificationApplication extends Application implements Notificat
     public void receive(Notification notification) {
 
         Log.d(TAG, "Received new " + notification);
+        //TODO Be sure to publish from here.
 
         String notifAppName = notification.getAppName();
         //If received notification application name isn't equals to my application name, ignore the notification
